@@ -28,7 +28,7 @@ const Banner =(props)=>{
 
     //fetch the locations
     const getLocations = async () =>{
-       const res = await fetch(`http://localhost:8888/restaurants/locations`)
+       const res = await fetch(`https://edurekaproject3-backend.onrender.com/restaurants/locations`)
        const data = await res.json()
        const formattedLocationsData = data.map(i=>`${i.city} - ${i.address}`) 
        //the formated data is saved to the state
@@ -45,7 +45,7 @@ const Banner =(props)=>{
     // impln :   getRestaurantsBasedOnCityAndAdress(city,address)
     const  getRestaurantsBasedOnCityAndAdress = async (city,address)=>{
       //make a call to the api to find resuatnats with city and address
-            const res= await  fetch(`http://localhost:8888/restaurants?city=${city}&address=${address}`)
+            const res= await  fetch(`https://edurekaproject3-backend.onrender.com/restaurants?city=${city}&address=${address}`)
             const localRestaurants = await res.json()
             console.log(localRestaurants)
             //i will save these res info for suggestions
