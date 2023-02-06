@@ -5,7 +5,7 @@ import {getLoggedIn} from './utilities'
 const Login = (props) => {
   // state which takes care of email and password
   const [formdata, setFormData] = useState({
-    email: 'youremail@domain.com',
+    email: '',
     password: ''
   })
 
@@ -35,7 +35,7 @@ const Login = (props) => {
       try {
         //only then do the signup
         // fetch : API => http://localhost:8888/user/register   POST
-        const response = await fetch('http://localhost:8888/user/login', {
+        const response = await fetch('https://edurekaproject3-backend.onrender.com/user/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

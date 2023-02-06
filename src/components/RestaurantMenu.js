@@ -45,7 +45,7 @@ const RestaurantMenu =(props)=>{
   }
 
    const getMenu = async (name)=>{
-     const url = `http://localhost:8888/restaurants/orders/${name}`
+     const url = `https://edurekaproject3-backend.onrender.com/restaurants/orders/${name}`
      const res = await fetch(url)
      const data = await res.json()
      setMenu(data)

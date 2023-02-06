@@ -12,7 +12,7 @@ const RestaurantPage = props => {
 
     // api 
     const getRestaurantData = async ()=>{
-        const res = await fetch(`http://localhost:8888/restaurants/${id}`)
+        const res = await fetch(`https://edurekaproject3-backend.onrender.com/restaurants/${id}`)
         const resData =await res.json()
         //set the rest details
         setRestaurantDetails(resData[0])

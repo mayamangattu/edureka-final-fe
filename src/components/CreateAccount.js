@@ -34,7 +34,7 @@ const CreateAccount = (props) => {
       try {
         //only then do the signup
         // fetch : API => http://localhost:8888/user/register   POST
-        const response = await fetch('http://localhost:8888/user/register', {
+        const response = await fetch('https://edurekaproject3-backend.onrender.com/user/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

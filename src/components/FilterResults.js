@@ -16,7 +16,7 @@ const FilterResults = (props) => {
         myFilterObject.cuisines = {"$in":myFilterObject.cuisines}
       }
        console.log(myFilterObject)
-       const url =`http://localhost:8888/restaurants/filters/${fo.order}/${fo.pg}`
+       const url =`https://edurekaproject3-backend.onrender.com/restaurants/filters/${fo.order}/${fo.pg}`
        const res= await fetch(url,{
           method: 'POST',
           headers: {
