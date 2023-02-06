@@ -9,7 +9,7 @@ const Filters = (props) => {
       //get the current city value from the local storage
       const city = localStorage.getItem('currentCity')
       // make an api call 
-      const res = await fetch(`http://localhost:8888/restaurants/locations/${city}`)
+      const res = await fetch(`https://edurekaproject3-backend.onrender.com/restaurants/locations/${city}`)
       const locationsData = await res.json()
       // get all the addresses from the q
       const addreses = locationsData.map(i=>i.address)
